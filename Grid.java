@@ -51,4 +51,15 @@ public class Grid {
         }
         return result;
     }
+    
+    public Cell getCell(int x, int y) {
+        if (x >= 0 && x < SIZE && y >= 0 && y < SIZE) {
+            return cells[y][x];  // Note: y is first because that's how the grid is stored
+        }
+        return null;
+    }
+    
+    public int getSize() {
+        return SIZE;
+    }
 }

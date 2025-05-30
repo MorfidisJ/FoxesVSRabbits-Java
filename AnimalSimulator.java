@@ -1,10 +1,8 @@
-// Morfidis Ioannis AM: 5740
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 
 public class AnimalSimulator {
-    
     private HashSet<Animal> animals;
     private final int NUM_OF_FOXES = 5;
     private final int NUM_OF_RABBITS = 100;
@@ -69,30 +67,7 @@ public class AnimalSimulator {
         System.out.println("Foxes: " + foxCount + ", Rabbits: " + rabbitCount);
     }
     
-    // ADD THIS METHOD for the test class
-    public PopulationCounter getPopulationCounts() {
-        int foxCount = 0;
-        int rabbitCount = 0;
-        
-        for (Animal animal : animals) {
-            if (animal.isRabbit()) {
-                rabbitCount++;
-            } else {
-                foxCount++;
-            }
-        }
-        
-        return new PopulationCounter(foxCount, rabbitCount);
-    }
-    
-    // ADD THIS HELPER CLASS
-    public static class PopulationCounter {
-        public int foxes;
-        public int rabbits;
-        
-        public PopulationCounter(int foxes, int rabbits) {
-            this.foxes = foxes;
-            this.rabbits = rabbits;
-        }
+    public HashSet<Animal> getAnimals() {
+        return animals;
     }
 }
